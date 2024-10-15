@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Tushar Bhoyar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            margin: 20px 0;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+            margin: 10px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .more-info {
+            display: none;
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Tushar Bhoyar</h1>
+        <p>Full Stack Web Developer</p>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a third-year engineering student at GH Raisoni University, specializing in full-stack web
+                development. I have a passion for creating efficient and scalable web applications.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML, CSS, JavaScript</li>
+                <li>React, Node.js</li>
+                <li>C, C++, Python</li>
+                <li>SQL, MongoDB</li>
+            </ul>
+        </section>
+
+        <section id="projects" style="display: none;">
+            <h2>Projects</h2>
+            <div>
+                <h3>Project 1: Portfolio Website</h3>
+                <p>A personal portfolio website to showcase my projects and skills.</p>
+            </div>
+            <div>
+                <h3>Project 2: Task Manager App</h3>
+                <p>A web application for managing tasks and deadlines using MERN stack.</p>
+            </div>
+            <div>
+                <h3>Project 3: E-commerce Site</h3>
+                <p>An online store with user authentication and payment integration.</p>
+            </div>
+            <div class="more-info" id="moreInfo">
+                <h3>Additional Project Details:</h3>
+                <p><strong>Portfolio Website:</strong> Developed using HTML, CSS, and JavaScript. Features a
+                    responsive design and showcases various projects with links.</p>
+                <p><strong>Task Manager App:</strong> Built with React for the front end and Node.js for the
+                    backend. Includes user authentication, real-time updates, and a task prioritization feature.</p>
+                <p><strong>E-commerce Site:</strong> Implemented payment gateway integration with a focus on user
+                    experience, performance optimization, and a robust product catalog.</p>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <p>Bachelor of Engineering in Computer Science<br>
+                GH Raisoni University, 2024 - Present</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Email: tusharbhoyar@example.com</p>
+            <p>LinkedIn: <a href="https://www.github.com/tusharbhoyar"
+                    target="_blank">linkedin.com/in/tusharbhoyar</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tushar Bhoyar</p>
+    </footer>
+
+    <script>
+        function toggleProjects() {
+            const projectsSection = document.getElementById('projects');
+            const isDisplayed = projectsSection.style.display === "block";
+            projectsSection.style.display = isDisplayed ? "none" : "block";
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const button = document.createElement('button');
+            button.textContent = 'Show Projects';
+            button.onclick = toggleProjects;
+            document.getElementById('skills').appendChild(button);
+        });
+
+        console.log("Welcome to Tushar Bhoyar's resume website!");
+    </script>
+</body>
+
+</html>
