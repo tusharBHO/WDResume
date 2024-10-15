@@ -7,18 +7,20 @@
     <title>Resume - Tushar Bhoyar</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: #2b2b2b;
+            color: #ffffff;
+            background-image: url('https://www.transparenttextures.com/patterns/asfalt.png');
         }
 
         header {
-            background-color: #333;
-            color: white;
+            background-color: #3c3c3c;
+            color: #00aaff;
             padding: 20px;
             text-align: center;
+            border-bottom: 3px solid #00aaff;
         }
 
         nav {
@@ -27,31 +29,51 @@
 
         nav a {
             margin: 0 15px;
-            color: white;
+            color: #00aaff;
             text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-bottom 0.3s;
+        }
+
+        nav a:hover {
+            border-bottom: 1px solid #00aaff;
         }
 
         section {
             padding: 20px;
             margin: 10px;
-            background: white;
+            background: #444;
             border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 15px rgba(0, 170, 255, 0.5);
+            position: relative;
+            overflow: hidden;
         }
 
-        h2 {
-            border-bottom: 2px solid #333;
+        section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://www.transparenttextures.com/patterns/white-paper.png');
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        section h2 {
+            border-bottom: 2px solid #00aaff;
             padding-bottom: 5px;
+            position: relative;
+            z-index: 1;
         }
 
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #333;
-            color: white;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+            background-color: #3c3c3c;
+            color: #00aaff;
+            border-top: 3px solid #00aaff;
         }
 
         .more-info {
@@ -60,16 +82,27 @@
         }
 
         button {
-            background-color: #333;
-            color: white;
+            background-color: #00aaff;
+            color: #000;
             border: none;
             padding: 10px 15px;
             cursor: pointer;
             border-radius: 5px;
+            transition: background-color 0.3s;
         }
 
         button:hover {
-            background-color: #555;
+            background-color: #0088cc;
+        }
+
+        #about img{
+            width: 140px;
+            border-radius: 5px;
+        }
+
+        .photo{
+            display: flex;
+            justify-content: center;
         }
     </style>
 </head>
@@ -89,9 +122,11 @@
 
     <main>
         <section id="about">
+            <div class="photo">
+                <img src="hecker.webp" alt="">
+            </div>
             <h2>About Me</h2>
-            <p>I am a third-year engineering student at GH Raisoni University, specializing in full-stack web
-                development. I have a passion for creating efficient and scalable web applications.</p>
+            <p>I am a third-year engineering student at GH Raisoni University, specializing in full-stack web development. I have a passion for creating efficient and scalable web applications.</p>
         </section>
 
         <section id="skills">
@@ -120,12 +155,9 @@
             </div>
             <div class="more-info" id="moreInfo">
                 <h3>Additional Project Details:</h3>
-                <p><strong>Portfolio Website:</strong> Developed using HTML, CSS, and JavaScript. Features a
-                    responsive design and showcases various projects with links.</p>
-                <p><strong>Task Manager App:</strong> Built with React for the front end and Node.js for the
-                    backend. Includes user authentication, real-time updates, and a task prioritization feature.</p>
-                <p><strong>E-commerce Site:</strong> Implemented payment gateway integration with a focus on user
-                    experience, performance optimization, and a robust product catalog.</p>
+                <p><strong>Portfolio Website:</strong> Developed using HTML, CSS, and JavaScript. Features a responsive design and showcases various projects with links.</p>
+                <p><strong>Task Manager App:</strong> Built with React for the front end and Node.js for the backend. Includes user authentication, real-time updates, and a task prioritization feature.</p>
+                <p><strong>E-commerce Site:</strong> Implemented payment gateway integration with a focus on user experience, performance optimization, and a robust product catalog.</p>
             </div>
         </section>
 
@@ -138,8 +170,8 @@
         <section id="contact">
             <h2>Contact Me</h2>
             <p>Email: tusharbhoyar@example.com</p>
-            <p>LinkedIn: <a href="https://www.github.com/tusharbhoyar"
-                    target="_blank">linkedin.com/in/tusharbhoyar</a></p>
+            <p>LinkedIn: <a href="https://www.github.com/tusharBHO"
+                    style="color: #00aaff;" target="_blank">linkedin.com/in/tusharbhoyar</a></p>
         </section>
     </main>
 
